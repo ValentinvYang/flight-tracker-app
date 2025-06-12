@@ -1,0 +1,1043 @@
+[
+    {
+        "type": "flight-offer",
+        "id": "1",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "isUpsellOffer": false,
+        "lastTicketingDate": "2025-06-13",
+        "lastTicketingDateTime": "2025-06-13",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT7H50M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "LGW",
+                            "at": "2025-07-01T13:05:00"
+                        },
+                        "arrival": {
+                            "iataCode": "JFK",
+                            "at": "2025-07-01T15:55:00"
+                        },
+                        "carrierCode": "A1",
+                        "number": "5951",
+                        "aircraft": {
+                            "code": "787"
+                        },
+                        "operating": {
+                            "carrierCode": "Z0"
+                        },
+                        "duration": "PT7H50M",
+                        "id": "9",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "340.01",
+            "base": "137.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "340.01"
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+            "GP"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "340.01",
+                    "base": "137.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "9",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "QEC",
+                        "class": "Q",
+                        "includedCheckedBags": {
+                            "quantity": 1
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "2",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "isUpsellOffer": false,
+        "lastTicketingDate": "2025-06-13",
+        "lastTicketingDateTime": "2025-06-13",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT11H10M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "LGW",
+                            "terminal": "N",
+                            "at": "2025-07-01T13:00:00"
+                        },
+                        "arrival": {
+                            "iataCode": "KEF",
+                            "at": "2025-07-01T15:15:00"
+                        },
+                        "carrierCode": "FI",
+                        "number": "471",
+                        "aircraft": {
+                            "code": "7M8"
+                        },
+                        "operating": {
+                            "carrierCode": "FI"
+                        },
+                        "duration": "PT3H15M",
+                        "id": "7",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    },
+                    {
+                        "departure": {
+                            "iataCode": "KEF",
+                            "at": "2025-07-01T17:00:00"
+                        },
+                        "arrival": {
+                            "iataCode": "EWR",
+                            "terminal": "B",
+                            "at": "2025-07-01T19:10:00"
+                        },
+                        "carrierCode": "FI",
+                        "number": "623",
+                        "aircraft": {
+                            "code": "76W"
+                        },
+                        "operating": {
+                            "carrierCode": "FI"
+                        },
+                        "duration": "PT6H10M",
+                        "id": "8",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "532.11",
+            "base": "228.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "532.11",
+            "additionalServices": [
+                {
+                    "amount": "120.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "FI"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "532.11",
+                    "base": "228.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "7",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TJ1QGBLT",
+                        "brandedFare": "LIGHT",
+                        "brandedFareLabel": "ECONOMY LIGHT",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        },
+                        "includedCabinBags": {
+                            "quantity": 1
+                        },
+                        "amenities": [
+                            {
+                                "description": "CHECKED BAG UP TO 23KG",
+                                "isChargeable": true,
+                                "amenityType": "BAGGAGE",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "ALCOHOLIC DRINK",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "NON ALCOHOLIC DRINK",
+                                "isChargeable": false,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "MEAL",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "USB POWER",
+                                "isChargeable": false,
+                                "amenityType": "ENTERTAINMENT",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "BASIC SEAT",
+                                "isChargeable": true,
+                                "amenityType": "BRANDED_FARES",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "segmentId": "8",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TJ1QGBLT",
+                        "brandedFare": "LIGHT",
+                        "brandedFareLabel": "ECONOMY LIGHT",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        },
+                        "includedCabinBags": {
+                            "quantity": 1
+                        },
+                        "amenities": [
+                            {
+                                "description": "CHECKED BAG UP TO 23KG",
+                                "isChargeable": true,
+                                "amenityType": "BAGGAGE",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "ALCOHOLIC DRINK",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "NON ALCOHOLIC DRINK",
+                                "isChargeable": false,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "MEAL",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "USB POWER",
+                                "isChargeable": false,
+                                "amenityType": "ENTERTAINMENT",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "BASIC SEAT",
+                                "isChargeable": true,
+                                "amenityType": "BRANDED_FARES",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "3",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "isUpsellOffer": false,
+        "lastTicketingDate": "2025-06-13",
+        "lastTicketingDateTime": "2025-06-13",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT11H5M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "LHR",
+                            "terminal": "2",
+                            "at": "2025-07-01T13:05:00"
+                        },
+                        "arrival": {
+                            "iataCode": "KEF",
+                            "at": "2025-07-01T15:15:00"
+                        },
+                        "carrierCode": "FI",
+                        "number": "451",
+                        "aircraft": {
+                            "code": "32Q"
+                        },
+                        "operating": {
+                            "carrierCode": "FI"
+                        },
+                        "duration": "PT3H10M",
+                        "id": "1",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    },
+                    {
+                        "departure": {
+                            "iataCode": "KEF",
+                            "at": "2025-07-01T17:00:00"
+                        },
+                        "arrival": {
+                            "iataCode": "EWR",
+                            "terminal": "B",
+                            "at": "2025-07-01T19:10:00"
+                        },
+                        "carrierCode": "FI",
+                        "number": "623",
+                        "aircraft": {
+                            "code": "76W"
+                        },
+                        "operating": {
+                            "carrierCode": "FI"
+                        },
+                        "duration": "PT6H10M",
+                        "id": "2",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "535.60",
+            "base": "228.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "535.60",
+            "additionalServices": [
+                {
+                    "amount": "120.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "FI"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "535.60",
+                    "base": "228.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "1",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TJ1QGBLT",
+                        "brandedFare": "LIGHT",
+                        "brandedFareLabel": "ECONOMY LIGHT",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        },
+                        "includedCabinBags": {
+                            "quantity": 1
+                        },
+                        "amenities": [
+                            {
+                                "description": "CHECKED BAG UP TO 23KG",
+                                "isChargeable": true,
+                                "amenityType": "BAGGAGE",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "ALCOHOLIC DRINK",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "NON ALCOHOLIC DRINK",
+                                "isChargeable": false,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "MEAL",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "USB POWER",
+                                "isChargeable": false,
+                                "amenityType": "ENTERTAINMENT",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "BASIC SEAT",
+                                "isChargeable": true,
+                                "amenityType": "BRANDED_FARES",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "segmentId": "2",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TJ1QGBLT",
+                        "brandedFare": "LIGHT",
+                        "brandedFareLabel": "ECONOMY LIGHT",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        },
+                        "includedCabinBags": {
+                            "quantity": 1
+                        },
+                        "amenities": [
+                            {
+                                "description": "CHECKED BAG UP TO 23KG",
+                                "isChargeable": true,
+                                "amenityType": "BAGGAGE",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "ALCOHOLIC DRINK",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "NON ALCOHOLIC DRINK",
+                                "isChargeable": false,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "MEAL",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "USB POWER",
+                                "isChargeable": false,
+                                "amenityType": "ENTERTAINMENT",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "BASIC SEAT",
+                                "isChargeable": true,
+                                "amenityType": "BRANDED_FARES",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "4",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "isUpsellOffer": false,
+        "lastTicketingDate": "2025-06-13",
+        "lastTicketingDateTime": "2025-06-13",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT11H5M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "LHR",
+                            "terminal": "2",
+                            "at": "2025-07-01T13:05:00"
+                        },
+                        "arrival": {
+                            "iataCode": "KEF",
+                            "at": "2025-07-01T15:15:00"
+                        },
+                        "carrierCode": "FI",
+                        "number": "451",
+                        "aircraft": {
+                            "code": "32Q"
+                        },
+                        "operating": {
+                            "carrierCode": "FI"
+                        },
+                        "duration": "PT3H10M",
+                        "id": "3",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    },
+                    {
+                        "departure": {
+                            "iataCode": "KEF",
+                            "at": "2025-07-01T17:00:00"
+                        },
+                        "arrival": {
+                            "iataCode": "JFK",
+                            "terminal": "7",
+                            "at": "2025-07-01T19:10:00"
+                        },
+                        "carrierCode": "FI",
+                        "number": "615",
+                        "aircraft": {
+                            "code": "76W"
+                        },
+                        "operating": {
+                            "carrierCode": "FI"
+                        },
+                        "duration": "PT6H10M",
+                        "id": "4",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "535.60",
+            "base": "228.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "535.60",
+            "additionalServices": [
+                {
+                    "amount": "120.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "FI"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "535.60",
+                    "base": "228.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "3",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TJ1QGBLT",
+                        "brandedFare": "LIGHT",
+                        "brandedFareLabel": "ECONOMY LIGHT",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        },
+                        "includedCabinBags": {
+                            "quantity": 1
+                        },
+                        "amenities": [
+                            {
+                                "description": "CHECKED BAG UP TO 23KG",
+                                "isChargeable": true,
+                                "amenityType": "BAGGAGE",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "ALCOHOLIC DRINK",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "NON ALCOHOLIC DRINK",
+                                "isChargeable": false,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "MEAL",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "USB POWER",
+                                "isChargeable": false,
+                                "amenityType": "ENTERTAINMENT",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "BASIC SEAT",
+                                "isChargeable": true,
+                                "amenityType": "BRANDED_FARES",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "segmentId": "4",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TJ1QGBLT",
+                        "brandedFare": "LIGHT",
+                        "brandedFareLabel": "ECONOMY LIGHT",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        },
+                        "includedCabinBags": {
+                            "quantity": 1
+                        },
+                        "amenities": [
+                            {
+                                "description": "CHECKED BAG UP TO 23KG",
+                                "isChargeable": true,
+                                "amenityType": "BAGGAGE",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "ALCOHOLIC DRINK",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "NON ALCOHOLIC DRINK",
+                                "isChargeable": false,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "MEAL",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "USB POWER",
+                                "isChargeable": false,
+                                "amenityType": "ENTERTAINMENT",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "BASIC SEAT",
+                                "isChargeable": true,
+                                "amenityType": "BRANDED_FARES",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "flight-offer",
+        "id": "5",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "isUpsellOffer": false,
+        "lastTicketingDate": "2025-06-13",
+        "lastTicketingDateTime": "2025-06-13",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+            {
+                "duration": "PT14H5M",
+                "segments": [
+                    {
+                        "departure": {
+                            "iataCode": "LHR",
+                            "terminal": "2",
+                            "at": "2025-07-01T13:05:00"
+                        },
+                        "arrival": {
+                            "iataCode": "KEF",
+                            "at": "2025-07-01T15:15:00"
+                        },
+                        "carrierCode": "FI",
+                        "number": "451",
+                        "aircraft": {
+                            "code": "32Q"
+                        },
+                        "operating": {
+                            "carrierCode": "FI"
+                        },
+                        "duration": "PT3H10M",
+                        "id": "5",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    },
+                    {
+                        "departure": {
+                            "iataCode": "KEF",
+                            "at": "2025-07-01T19:55:00"
+                        },
+                        "arrival": {
+                            "iataCode": "JFK",
+                            "terminal": "7",
+                            "at": "2025-07-01T22:10:00"
+                        },
+                        "carrierCode": "FI",
+                        "number": "619",
+                        "aircraft": {
+                            "code": "7M8"
+                        },
+                        "operating": {
+                            "carrierCode": "FI"
+                        },
+                        "duration": "PT6H15M",
+                        "id": "6",
+                        "numberOfStops": 0,
+                        "blacklistedInEU": false
+                    }
+                ]
+            }
+        ],
+        "price": {
+            "currency": "EUR",
+            "total": "535.60",
+            "base": "228.00",
+            "fees": [
+                {
+                    "amount": "0.00",
+                    "type": "SUPPLIER"
+                },
+                {
+                    "amount": "0.00",
+                    "type": "TICKETING"
+                }
+            ],
+            "grandTotal": "535.60",
+            "additionalServices": [
+                {
+                    "amount": "120.00",
+                    "type": "CHECKED_BAGS"
+                }
+            ]
+        },
+        "pricingOptions": {
+            "fareType": [
+                "PUBLISHED"
+            ],
+            "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+            "FI"
+        ],
+        "travelerPricings": [
+            {
+                "travelerId": "1",
+                "fareOption": "STANDARD",
+                "travelerType": "ADULT",
+                "price": {
+                    "currency": "EUR",
+                    "total": "535.60",
+                    "base": "228.00"
+                },
+                "fareDetailsBySegment": [
+                    {
+                        "segmentId": "5",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TJ1QGBLT",
+                        "brandedFare": "LIGHT",
+                        "brandedFareLabel": "ECONOMY LIGHT",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        },
+                        "includedCabinBags": {
+                            "quantity": 1
+                        },
+                        "amenities": [
+                            {
+                                "description": "CHECKED BAG UP TO 23KG",
+                                "isChargeable": true,
+                                "amenityType": "BAGGAGE",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "ALCOHOLIC DRINK",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "NON ALCOHOLIC DRINK",
+                                "isChargeable": false,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "MEAL",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "USB POWER",
+                                "isChargeable": false,
+                                "amenityType": "ENTERTAINMENT",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "BASIC SEAT",
+                                "isChargeable": true,
+                                "amenityType": "BRANDED_FARES",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "segmentId": "6",
+                        "cabin": "ECONOMY",
+                        "fareBasis": "TJ1QGBLT",
+                        "brandedFare": "LIGHT",
+                        "brandedFareLabel": "ECONOMY LIGHT",
+                        "class": "T",
+                        "includedCheckedBags": {
+                            "quantity": 0
+                        },
+                        "includedCabinBags": {
+                            "quantity": 1
+                        },
+                        "amenities": [
+                            {
+                                "description": "CHECKED BAG UP TO 23KG",
+                                "isChargeable": true,
+                                "amenityType": "BAGGAGE",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "ALCOHOLIC DRINK",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "NON ALCOHOLIC DRINK",
+                                "isChargeable": false,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "MEAL",
+                                "isChargeable": true,
+                                "amenityType": "MEAL",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "USB POWER",
+                                "isChargeable": false,
+                                "amenityType": "ENTERTAINMENT",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            },
+                            {
+                                "description": "BASIC SEAT",
+                                "isChargeable": true,
+                                "amenityType": "BRANDED_FARES",
+                                "amenityProvider": {
+                                    "name": "BrandedFare"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
