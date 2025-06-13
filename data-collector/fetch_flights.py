@@ -15,7 +15,7 @@ def fetch_flight_offers(origin, destination, departure_date, adults=1):
             destinationLocationCode=destination,
             departureDate=departure_date,
             adults=adults,
-            max=5  # limit the number of results
+            max=1  # limit the number of results
         )
         return response.data
     except ResponseError as error:
@@ -33,9 +33,9 @@ def save_data_locally(data, filename='flight_offers.json'):
 
 if __name__ == "__main__":
     # Example parameters
-    origin = 'LON'  # London
-    destination = 'NYC'  # New York City
-    departure_date = '2025-07-01'  # YYYY-MM-DD
+    origin = 'ZRH'  # London
+    destination = 'KEF'  # New York City
+    departure_date = '2025-12-23'  # YYYY-MM-DD
     adults = 1
 
     print(f"Fetching flight offers from {origin} to {destination} on {departure_date}...")

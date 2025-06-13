@@ -5,7 +5,7 @@ from pymongo import MongoClient
 # Connect to MongoDB
 client = MongoClient("mongodb://localhost:27017/")
 db = client['flight-tracker']
-collection = db['school']
+collection = db['flight-data']
 
 # Load JSON data from file
 filename = 'flight_offers.json'
