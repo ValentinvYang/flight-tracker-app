@@ -2,6 +2,7 @@ package com.VYang.flightTrackerAPI.controller;
 
 import java.util.Optional;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,6 +26,7 @@ public class FlightController {
     }
 
     @GetMapping("/flights")
+    @CrossOrigin(origins = "http://localhost:5173")
     public Optional<Flight> getFlight() {
         return flightService.findFlight("684c300745543f7cf10461e8");
     }
