@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.VYang.flightTrackerAPI.domain.UserData;
+import com.VYang.flightTrackerAPI.exception.RouteAlreadyExistsException;
+import com.VYang.flightTrackerAPI.exception.UserAlreadyExistsException;
+import com.VYang.flightTrackerAPI.exception.UserNotFoundException;
 import com.VYang.flightTrackerAPI.service.FlightService;
 
 @RestController
@@ -39,13 +42,25 @@ public class FlightController {
         @RequestParam String arrival,
         @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate departureDate) {
         
-        // TODO: add correct exceptions, maybe testcases?
         try {
             flightService.addRoute(username, departure, arrival, departureDate);
             return ResponseEntity.ok("Route added successfully");
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
-        } 
+        } catch (UserNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (RouteAlreadyExistsException e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
+        }
+    }
+
+    @PostMapping("/users")
+    @CrossOrigin(origins = "http://localhost:5173")
+    public ResponseEntity<?> createUser(@RequestParam String username) {
+        try {
+            flightService.createUser(username);
+            return ResponseEntity.ok("User added successfully");
+        } catch (UserAlreadyExistsException e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
+        }
     }
 
 }

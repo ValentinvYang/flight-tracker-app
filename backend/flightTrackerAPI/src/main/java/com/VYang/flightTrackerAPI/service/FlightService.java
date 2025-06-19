@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.VYang.flightTrackerAPI.domain.UserData;
+import com.VYang.flightTrackerAPI.exception.RouteAlreadyExistsException;
+import com.VYang.flightTrackerAPI.exception.UserAlreadyExistsException;
+import com.VYang.flightTrackerAPI.exception.UserNotFoundException;
 import com.VYang.flightTrackerAPI.repository.UserRepository;
 
 @Service
@@ -46,22 +49,43 @@ public class FlightService {
                 userData.setRoutes(routes);
             }
             
-            // Optional: check if route already exists to avoid duplicates
-            boolean routeExists = routes.stream().anyMatch(r ->
-                r.getDeparture().equals(departure) &&
-                r.getArrival().equals(arrival) &&
-                r.getDepartureDate().equals(departureDate)
-            );
+            boolean routeExists = false;
+            for (UserData.Route r : routes) {
+                if (
+                    r.getDeparture().equals(departure) &&
+                    r.getArrival().equals(arrival) &&
+                    r.getDepartureDate().equals(departureDate)
+                ) {
+                    routeExists = true;
+                    break;
+                }
+            }
 
             if (!routeExists) {
                 routes.add(newRoute);
                 userRepository.save(userData);
             } else {
-                // maybe throw an exception or ignore
+                throw new RouteAlreadyExistsException(departure, arrival);
             }
         } else {
-            // Handle case user not found (throw exception or return error)
+            throw new UserNotFoundException();
         }
+    }
+
+    public void createUser(String username) {        
+        // Check if user already exists
+        if (findByUsername(username).isPresent()) {
+            throw new UserAlreadyExistsException();
+        }
+
+        // Create new user
+        UserData newUser = UserData.builder()
+                            .username(username)
+                            .routes(new ArrayList<>())
+                            .build();
+
+        // Save user to MongoDB
+        userRepository.save(newUser);
     }
 
 }
