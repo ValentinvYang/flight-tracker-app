@@ -1,6 +1,6 @@
 import HeroSectionMap from "../assets/HeroSectionMap.png";
 
-export default function HeroSection() {
+export default function HeroSection({ setView }) {
   return (
     <section
       className="w-full h-[600px] bg-cover bg-center relative flex items-center justify-center text-white"
@@ -14,7 +14,7 @@ export default function HeroSection() {
         <p className="text-lg md:text-xl text-white/90 mb-6">
           Weekly insights powered by real-time data from the Amadeus API.
         </p>
-        <button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition">
+        <button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition cursor-pointer">
           Get Started
         </button>
       </div>
