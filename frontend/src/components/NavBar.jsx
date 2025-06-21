@@ -1,7 +1,14 @@
 import { useView } from "../context/viewContext";
+import { useAuth } from "../context/authContext";
 
 export default function NavBar() {
   const { setView } = useView();
+  const { isAuthenticated, setIsAuthenticated } = useAuth();
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    setView("Landing");
+  };
 
   return (
     <nav className="w-full fixed top-0 left-0 z-50 bg-black text-white">
@@ -22,12 +29,23 @@ export default function NavBar() {
           >
             Home
           </button>
-          <button
-            onClick={() => setView("Signup")}
-            className="hover:text-blue-400 transition cursor-pointer"
-          >
-            Sign Up
-          </button>
+
+          {!isAuthenticated ? (
+            <button
+              onClick={() => setView("Login")}
+              className="hover:text-blue-400 transition cursor-pointer"
+            >
+              Login
+            </button>
+          ) : (
+            <button
+              onClick={handleLogout}
+              className="hover:text-red-400 transition cursor-pointer"
+            >
+              Logout
+            </button>
+          )}
+
           <button
             onClick={() => setView("User")}
             className="hover:text-blue-400 transition cursor-pointer"

@@ -1,3 +1,3 @@
 export default function User() {
-  return;
+  return <p className="mt-20">Hello User</p>;
 }
