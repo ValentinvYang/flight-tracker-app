@@ -1,21 +1,24 @@
 package com.VYang.flightTrackerAPI.controller;
 
-import java.time.LocalDate;
 import java.util.Optional;
 
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.VYang.flightTrackerAPI.domain.UserData;
+import com.VYang.flightTrackerAPI.dto.CreateUserDto;
+import com.VYang.flightTrackerAPI.dto.LoginDto;
+import com.VYang.flightTrackerAPI.dto.RouteDto;
 import com.VYang.flightTrackerAPI.exception.RouteAlreadyExistsException;
 import com.VYang.flightTrackerAPI.exception.UserAlreadyExistsException;
 import com.VYang.flightTrackerAPI.exception.UserNotFoundException;
+import com.VYang.flightTrackerAPI.exception.WrongPasswordException;
 import com.VYang.flightTrackerAPI.service.FlightService;
 
 @RestController
@@ -36,14 +39,10 @@ public class FlightController {
 
     @PostMapping("/routes")
     @CrossOrigin(origins = "http://localhost:5173")
-    public ResponseEntity<?> addRoute(
-        @RequestParam String username,
-        @RequestParam String departure,
-        @RequestParam String arrival,
-        @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate departureDate) {
+    public ResponseEntity<?> addRoute(@RequestBody RouteDto routeDto) {
         
         try {
-            flightService.addRoute(username, departure, arrival, departureDate);
+            flightService.addRoute(routeDto.getUsername(), routeDto.getDeparture(), routeDto.getArrival(), routeDto.getDepartureDate());
             return ResponseEntity.ok("Route added successfully");
         } catch (UserNotFoundException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
@@ -52,13 +51,28 @@ public class FlightController {
         }
     }
 
-    @PostMapping("/users")
+    @PostMapping("/signup")
     @CrossOrigin(origins = "http://localhost:5173")
-    public ResponseEntity<?> createUser(@RequestParam String username) {
+    public ResponseEntity<?> createUser(@RequestBody CreateUserDto createUserDto) {
         try {
-            flightService.createUser(username);
+            flightService.createUser(createUserDto);
             return ResponseEntity.ok("User added successfully");
         } catch (UserAlreadyExistsException e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
+        }
+    }
+
+    @PostMapping("/login")
+    @CrossOrigin(origins = "http://localhost:5173")
+    public ResponseEntity<?> login(@RequestBody LoginDto loginDto) {
+        try {
+            flightService.login(loginDto);
+            return ResponseEntity.ok("User logged in successfully");
+        } catch (UserNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
+        } catch (WrongPasswordException e) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
+        } catch (IllegalArgumentException e) {
             return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
         }
     }

@@ -23,6 +23,8 @@ public class UserData {
     private String id;
 
     private String username;
+    private String email;
+    private String password;
     private List<Route> routes;
 
     @Data
