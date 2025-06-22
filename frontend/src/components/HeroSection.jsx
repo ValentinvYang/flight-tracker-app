@@ -1,10 +1,10 @@
-import HeroSectionMap from "../assets/HeroSectionMap.png";
+import HeroSectionMap2 from "../assets/HeroSectionMap2.png";
 
 export default function HeroSection({ setView }) {
   return (
     <section
-      className="w-full h-[600px] bg-cover bg-center relative flex items-center justify-center text-white"
-      style={{ backgroundImage: `url(${HeroSectionMap})` }}
+      className="w-full min-h-screen bg-cover bg-center relative flex items-center justify-center text-white"
+      style={{ backgroundImage: `url(${HeroSectionMap2})` }}
     >
       {/* Modal-style text box */}
       <div className="bg-white/10 backdrop-blur-md border-none rounded-xl p-10 text-center max-w-xl shadow-xl">
