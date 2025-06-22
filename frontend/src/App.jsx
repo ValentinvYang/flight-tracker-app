@@ -1,6 +1,6 @@
 import Landing from "./pages/Landing";
 import Signup from "./pages/Signup";
-import User from "./pages/User";
+import Dashboard from "./pages/Dashboard";
 import NavBar from "./components/NavBar";
 import { useView } from "./context/viewContext";
 import Login from "./pages/Login";
@@ -12,7 +12,7 @@ export default function App() {
     <>
       <NavBar />
       {view === "Landing" && <Landing />};{view === "Signup" && <Signup />};
-      {view === "User" && <User />};{view === "Login" && <Login />}
+      {view === "Dashboard" && <Dashboard />};{view === "Login" && <Login />}
     </>
   );
 }

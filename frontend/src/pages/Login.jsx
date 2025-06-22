@@ -27,7 +27,7 @@ export default function Login() {
       );
       setSuccess(true);
       setIsAuthenticated(true);
-      setView("User");
+      setView("Dashboard");
     } catch (err) {
       setError(err.message);
     } finally {

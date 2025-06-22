@@ -39,7 +39,7 @@ export default function NavBar() {
             </button>
           ) : (
             <button
-              onClick={handleLogout}
+              onClick={() => handleLogout()}
               className="hover:text-red-400 transition cursor-pointer"
             >
               Logout
@@ -47,7 +47,7 @@ export default function NavBar() {
           )}
 
           <button
-            onClick={() => setView("User")}
+            onClick={() => setView("Dashboard")}
             className="hover:text-blue-400 transition cursor-pointer"
           >
             Dashboard
