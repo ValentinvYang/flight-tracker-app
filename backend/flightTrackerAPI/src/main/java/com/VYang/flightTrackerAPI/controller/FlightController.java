@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -31,13 +32,13 @@ public class FlightController {
     }
 
     // Retrieving flight data based on username:
-    @GetMapping("/flights")
+    @GetMapping("/api/v1/trackedRoutes")
     @CrossOrigin(origins = "http://localhost:5173")
     public Optional<UserData> getDataOfUser(@RequestParam String username) {
         return flightService.findByUsername(username);
     }
 
-    @PostMapping("/routes")
+    @PostMapping("/api/v1/trackedRoutes")
     @CrossOrigin(origins = "http://localhost:5173")
     public ResponseEntity<?> addRoute(@RequestBody RouteDto routeDto) {
         
@@ -51,7 +52,14 @@ public class FlightController {
         }
     }
 
-    @PostMapping("/signup")
+    @DeleteMapping("/api/v1/trackedRoutes/{id}")
+    @CrossOrigin(origins = "http://localhost:5173")
+    public ResponseEntity<?> removeRoute(@RequestBody RouteDto routeDto) {
+        //TODO
+        return null;
+    }
+
+    @PostMapping("/api/v1/auth/signup")
     @CrossOrigin(origins = "http://localhost:5173")
     public ResponseEntity<?> createUser(@RequestBody CreateUserDto createUserDto) {
         try {
@@ -62,7 +70,7 @@ public class FlightController {
         }
     }
 
-    @PostMapping("/login")
+    @PostMapping("/api/v1/auth/login")
     @CrossOrigin(origins = "http://localhost:5173")
     public ResponseEntity<?> login(@RequestBody LoginDto loginDto) {
         try {
